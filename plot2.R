@@ -12,5 +12,6 @@ baltimoreemm <- aggregate(Emissions~year,baltimoreNEI,sum)
 plot2 <- barplot(height=baltimoreemm$Emissions/1000, names.arg=baltimoreemm$year,
                  xlab="years", ylab=expression('total PM'[2.5]*' emission in kilotons'),ylim=c(0,4),
                  main=expression('Total PM'[2.5]*' emissions at various years in kilotons for Baltimore'))
+#Save
 dev.copy(png, file = "plot2.png",height=800,width=800)
 dev.off()
